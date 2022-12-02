@@ -1,6 +1,11 @@
 {
   "urlQueryString": "",
   "repositoryId": "665",
+  "owner": "akhilesh168",
+  "repo": "react-gh-pages",
+  "ref": "master",
+  "qbCliPath": "qbcli.json",
+  "deployPath": "deploy",
   "prodPrefix": "ATNT-Pivot Table-PivotUI_Prod",
   "devPrefix": "D",
   "dbid": "bsrb9fvi6",
