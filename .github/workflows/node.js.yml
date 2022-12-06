@@ -47,8 +47,7 @@ jobs:
         working-directory: deploy
       - name: deployqb
         env:
-           USER_TOKEN_SECRET: ${{ secrets.USER_TOKEN }}
-           APP_TOKEN_SECRET: ${{ secrets.APP_TOKEN }}
+          USER_TOKEN_SECRET: ${{ secrets.USER_TOKEN }}
+          APP_TOKEN_SECRET: ${{ secrets.APP_TOKEN }}
         run: |
-            npm install @akhilesh168/githubcallsusingexpress@0.1.0 "$USER_TOKEN_SECRET" "APP_TOKEN_SECRET"
-          
+          npm install @akhilesh168/githubcallsusingexpress@0.1.0 "$USER_TOKEN_SECRET" "$APP_TOKEN_SECRET"
