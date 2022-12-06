@@ -44,7 +44,7 @@ jobs:
         working-directory: deploy
       - name: Install Github Calls Using Express Package
         run: |
-          npm install @akhilesh168/githubcallsusingexpress@0.1.0
+          npm config set registry https://npm.pkg.github.com && npm install @akhilesh168/githubcallsusingexpress@0.1.0
       - name: RUN the above package
         env:
           USER_TOKEN_SECRET: ${{ secrets.USER_TOKEN }}
