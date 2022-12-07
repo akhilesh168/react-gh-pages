@@ -42,9 +42,16 @@ jobs:
       - name: run npm build dist command to copy files from build folder
         run: npm run build-dist
         working-directory: deploy
+      - name: Login to GitHub private NPM registry
+        env:
+          CI_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          npm install -g npm-cli-login
+          npm-cli-login -u "akhilesh168" -p "${CI_ACCESS_TOKEN}" -e "akhilesh.sharma168@gmail.com" -r "https://npm.pkg.github.com" -s "@akhilesh168"
       - name: Install Github Calls Using Express Package
         run: |
-          npm config set registry https://npm.pkg.github.com && npm install @akhilesh168/githubcallsusingexpress@0.1.0
+          npm install @akhilesh168/githubcallsusingexpress
       - name: RUN the above package
         env:
           USER_TOKEN_SECRET: ${{ secrets.USER_TOKEN }}
