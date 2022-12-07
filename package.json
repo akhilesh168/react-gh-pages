@@ -20,7 +20,7 @@
     "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deployqb": "@akhilesh168/githubcallsusingexpress start"
+    "deployqb": "githubcallsusingexpress"
   },
   "eslintConfig": {
     "extends": [
