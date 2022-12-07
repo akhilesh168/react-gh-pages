@@ -50,11 +50,8 @@ jobs:
           npm install -g npm-cli-login
           npm-cli-login -u "akhilesh168" -p "${CI_ACCESS_TOKEN}" -e "akhilesh.sharma168@gmail.com" -r "https://npm.pkg.github.com" -s "@akhilesh168"
       - name: Install Github Calls Using Express Package
-        run: |
-          npm install @akhilesh168/githubcallsusingexpress
-      - name: RUN the above package
         env:
           USER_TOKEN_SECRET: ${{ secrets.USER_TOKEN }}
           APP_TOKEN_SECRET: ${{ secrets.APP_TOKEN }}
         run: |
-          npm run deployqb OWNER=akhilesh168 REPO_NAME=react-gh-pages APP_TOKEN="$APP_TOKEN_SECRET" USER_TOKEN="$USER_TOKEN_SECRET"
+          npm install @akhilesh168/githubcallsusingexpress &&  npm run deployqb OWNER=akhilesh168 REPO_NAME=react-gh-pages APP_TOKEN="$APP_TOKEN_SECRET" USER_TOKEN="$USER_TOKEN_SECRET"
