@@ -57,4 +57,4 @@ jobs:
           USER_TOKEN_SECRET: ${{ secrets.USER_TOKEN }}
           APP_TOKEN_SECRET: ${{ secrets.APP_TOKEN }}
         run: |
-          npm start OWNER=akhilesh168 REPO_NAME=react-gh-pages APP_TOKEN="$APP_TOKEN_SECRET" USER_TOKEN="$USER_TOKEN_SECRET"
+          npm run deployqb OWNER=akhilesh168 REPO_NAME=react-gh-pages APP_TOKEN="$APP_TOKEN_SECRET" USER_TOKEN="$USER_TOKEN_SECRET"

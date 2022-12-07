@@ -19,7 +19,8 @@
     "build-dist": "cp ./build/static/js/main*.js ./deploy/main.js && cp ./build/static/css/main*.css ./deploy/main.css",
     "start": "react-scripts start",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deployqb": "@akhilesh168/githubcallsusingexpress start"
   },
   "eslintConfig": {
     "extends": [
